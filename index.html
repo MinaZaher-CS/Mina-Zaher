@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Summer Training Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS to enforce blue color degrees and styling */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f8ff; /* Lightest blue */
+        }
+        .bg-gradient-blue {
+            background-image: linear-gradient(to right, #60a5fa, #3b82f6); /* Blue gradient */
+        }
+        .header-bg {
+            background-color: #1e3a8a; /* Dark blue for header */
+        }
+        .container-bg {
+            background-color: #dbeafe; /* Light blue for containers */
+        }
+        .btn-primary {
+            background-color: #3b82f6; /* Medium blue for buttons */
+            color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-card {
+            border: 2px solid #60a5fa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .correct-answer {
+            background-color: #d1fae5; /* Light green */
+            border-color: #34d399; /* Green */
+        }
+        .incorrect-answer {
+            background-color: #fee2e2; /* Light red */
+            border-color: #f87171; /* Red */
+        }
+        .drag-item {
+            cursor: grab;
+            border: 1px solid #60a5fa;
+            background-color: #eff6ff; /* Very light blue */
+        }
+        .drag-item.dragging {
+            opacity: 0.5;
+        }
+        .drop-target {
+            border: 2px dashed #3b82f6;
+            background-color: #e0f2fe; /* Lighter blue */
+        }
+    </style>
+</head>
+<body class="bg-[#f0f8ff] text-gray-800">
+
+    <header class="header-bg text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto p-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="#" onclick="loadPage('home')" class="text-3xl font-bold tracking-tight mb-4 md:mb-0">AI Summer Training
+                <span class="text-blue-300">Quiz</span>
+            </a>
+            <ul class="flex flex-wrap justify-center space-x-2 md:space-x-4 text-lg">
+                <li><button onclick="loadPage('home')" class="btn-primary rounded-full px-4 py-2">Home</button></li>
+                <li><button onclick="loadPage('d1q')" class="btn-primary rounded-full px-4 py-2">D1Q</button></li>
+                <li><button onclick="loadPage('d2q')" class="btn-primary rounded-full px-4 py-2">D2Q</button></li>
+                <li><button onclick="loadPage('d3q')" class="btn-primary rounded-full px-4 py-2">D3Q</button></li>
+                <li><button onclick="loadPage('d4q')" class="btn-primary rounded-full px-4 py-2">D4Q</button></li>
+                <li><button onclick="loadPage('d5q')" class="btn-primary rounded-full px-4 py-2">D5Q</button></li>
+                <li><button onclick="loadPage('contact')" class="btn-primary rounded-full px-4 py-2">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content-area" class="container mx-auto p-4 md:p-8 mt-8">
+        </main>
+
+    <script>
+        const pageData = {
+            'home': `
+                <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
+                    <img src="https://placehold.co/800x200/dbeafe/1e3a8a?text=AI+Summer+Training" alt="AI Summer Training" class="mx-auto rounded-lg mb-6">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 mb-4">Welcome to the EELU AI Training</h1>
+                    <p class="text-lg md:text-xl text-blue-800 mb-6 max-w-2xl mx-auto">
+                        This interactive quiz platform is designed to help you prepare for your Artificial Intelligence Summer Training at the Egyptian E-Learning University.
+                        Test your knowledge across various domains of AI.
+                    </p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 1: AI Problem Definition</h2>
+                            <p class="text-sm text-gray-600">Understand what problem you're solving, why it matters, and how AI fits in.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 2: Data Collection Processing and Engineering</h2>
+                            <p class="text-sm text-gray-600">Get high-quality, usable data for AI models. (More content coming soon)</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 3: AI Algorithms and Models</h2>
+                            <p class="text-sm text-gray-600">Know the right algorithms for the task and how to train/tune them. (More content coming soon)</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 4: Application Integration and Deployment</h2>
+                            <p class="text-sm text-gray-600">Make your AI solution usable in a real-world system. (More content coming soon)</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 5: Maintaining and Monitoring AI Video</h2>
+                            <p class="text-sm text-gray-600">Keep the model accurate, fair, and reliable over time. (More content coming soon)</p>
+                        </div>
+                    </div>
+                </div>
+            `,
+            'contact': `
+                <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">Contact Information</h1>
+                    <p class="text-lg md:text-xl text-blue-800 mb-6 max-w-xl mx-auto">
+                        This material was made by Eng/ Mina Zaher, affiliated with the Egyptian E-Learning University's Faculty of Computers and Information Technology.
+                    </p>
+                    <div class="text-left max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg border border-blue-200">
+                        <h2 class="text-2xl font-bold text-blue-700 mb-4">Eng/ Mina Zaher</h2>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><span class="font-semibold">University:</span> Egyptian E-Learning University</li>
+                            <li><span class="font-semibold">Faculty:</span> Computers and Information Technology</li>
+                            <li><span class="font-semibold">Email:</span> minazaher@eelu.edu.eg (placeholder)</li>
+                            <li><span class="font-semibold">Phone:</span> +20 123 456 7890 (placeholder)</li>
+                        </ul>
+                    </div>
+                </div>
+            `
+        };
+
+        const quizSubpages = {
+            'd1q': ['fill-in-the-blank', 'pre-questions', 'post-questions'],
+            'd2q': ['pre-questions', 'post-questions'],
+            'd3q': ['pre-questions', 'post-questions'],
+            'd4q': ['pre-questions', 'post-questions'],
+            'd5q': ['pre-questions', 'post-questions']
+        };
+
+        const questions = {
+            'fill-in-the-blank': [
+                { type: 'fill_in_the_blank', question: 'Mean squared error ($MSE$) and mean absolute error ($MAE$) are measures of prediction error.', answer: 'prediction error' },
+                { type: 'fill_in_the_blank', question: 'When an AI model makes a prediction, the difference between the predicted value and the actual value is called the _________.', answer: 'error' },
+                { type: 'fill_in_the_blank', question: 'An AI solution needs to be _________ by an AI expert before being implemented.', answer: 'reviewed' }
+            ],
+            'pre-questions': [
+                { type: 'mcq', question: 'What is the primary purpose of problem framing in AI?', options: ['To select a programming language', 'To identify the type of AI task', 'To design the user interface', 'To gather random data'], answer: 'To identify the type of AI task' },
+                { type: 'mcq', question: 'What is a key consideration in feasibility analysis?', options: ['The budget', 'The time of day', 'The number of team members', 'The color of the dataset'], answer: 'The budget' },
+                { type: 'mcq', question: 'Which of the following is a common success metric for classification models?', options: ['MAE', 'F1-score', 'RMSE', 'R-squared'], answer: 'F1-score' }
+            ],
+            'post-questions': [
+                { type: 'mcq', question: 'What is logistic regression?', options: ['A type of regression that uses ordinal variables as outcomes', 'A type of regression that uses binary, dependent variables as outcomes', 'A type of regression that uses independent variables as outcomes', 'A type of regression that uses continuous variables as outcomes'], answer: 'A type of regression that uses binary, dependent variables as outcomes' },
+                { type: 'mcq', question: 'How can one help ensure AI solutions are not used out of context?', options: ['Encourage people to use AI solutions in multiple different situations', 'Ensure AI solutions are intended for multiple different situations', 'Ensure AI solutions are reviewed by an AI expert before being implemented', 'Clearly communicate the scope and limitations of AI solutions'], answer: 'Clearly communicate the scope and limitations of AI solutions' },
+                { type: 'multi-select', question: 'How can users ensure a network storing data is secure? Choose three answers.', options: ['The network should be behind a firewall', 'The network should be a public connection', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system', 'The network should only be accessible for a limited amount of time'], answer: ['The network should be behind a firewall', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system'] },
+                { type: 'drag_drop', question: 'Match the description of a secure network practice to its name.', items: [{ id: 'firewall', text: 'A security system that controls incoming and outgoing network traffic.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=Firewall' }, { id: 'segmentation', text: 'Dividing a computer network into multiple smaller networks.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=Segmentation' }, { id: 'ids', text: 'A system that monitors a network for malicious activity or policy violations.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=IDS' }], answers: { 'firewall': 'A security system that controls incoming and outgoing network traffic.', 'segmentation': 'Dividing a computer network into multiple smaller networks.', 'ids': 'A system that monitors a network for malicious activity or policy violations.' } }
+            ]
+        };
+
+        let currentQuizType = null;
+        let score = 0;
+
+        function loadPage(pageName) {
+            const contentArea = document.getElementById('content-area');
+            contentArea.innerHTML = '';
+
+            if (pageData[pageName]) {
+                contentArea.innerHTML = pageData[pageName];
+                currentQuizType = null;
+            } else if (quizSubpages[pageName]) {
+                renderSubpageMenu(pageName);
+            } else if (questions[pageName]) {
+                currentQuizType = pageName;
+                renderQuiz(questions[pageName]);
+            } else {
+                contentArea.innerHTML = `<div class="p-8 container-bg rounded-2xl shadow-xl text-center"><h1 class="text-4xl font-extrabold text-blue-900 mb-4">Coming Soon!</h1><p class="text-lg text-blue-800">Content for ${pageName.replace('-', ' ')} is not yet available.</p></div>`;
+            }
+        }
+
+        function renderSubpageMenu(domainName) {
+            const contentArea = document.getElementById('content-area');
+            const subpages = quizSubpages[domainName];
+            const heading = domainName.toUpperCase();
+            const buttonsHtml = subpages.map(subpage => {
+                const buttonText = subpage.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+                return `<button onclick="loadPage('${subpage}')" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">${buttonText}</button>`;
+            }).join('');
+
+            contentArea.innerHTML = `
+                <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">${heading}</h1>
+                    <div class="flex flex-wrap justify-center space-x-4">
+                        ${buttonsHtml}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderQuiz(quizQuestions) {
+            const contentArea = document.getElementById('content-area');
+            const quizHtml = quizQuestions.map((q, index) => {
+                let questionHtml = '';
+                if (q.type === 'mcq' || q.type === 'multi-select') {
+                    const inputType = q.type === 'mcq' ? 'radio' : 'checkbox';
+                    const name = `q${index}`;
+                    const optionsHtml = q.options.map(option => `
+                        <div class="flex items-center space-x-2">
+                            <input type="${inputType}" name="${name}" value="${option}" id="q${index}-${option}" class="form-radio text-blue-600">
+                            <label for="q${index}-${option}" class="text-base text-gray-700">${option}</label>
+                        </div>
+                    `).join('');
+                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><div class="space-y-2">${optionsHtml}</div></div>`;
+                } else if (q.type === 'fill_in_the_blank') {
+                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><input type="text" id="q${index}-input" class="w-full mt-2 p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Type your answer here..."></div>`;
+                } else if (q.type === 'drag_drop') {
+                    const dragItemsHtml = q.items.map(item => `<div id="drag-${item.id}" class="drag-item p-4 rounded-xl shadow-sm bg-white text-gray-700 mb-2 cursor-grab" draggable="true"><img src="${item.image}" alt="${item.id}" class="w-24 h-24 mx-auto mb-2 rounded-lg" /><p class="text-sm font-medium text-center">${item.id}</p></div>`).join('');
+                    const dropTargetsHtml = q.items.map(item => `<div id="drop-${item.id}" class="drop-target p-4 rounded-xl flex-grow flex flex-col justify-center items-center text-center"><p class="text-sm font-semibold text-blue-700">${item.text}</p><div class="mt-2 w-full h-16 bg-gray-100 rounded-lg flex items-center justify-center p-2 text-gray-500 text-xs">Drop item here</div></div>`).join('');
+                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-4">Question ${index + 1}: ${q.question}</p><div class="flex flex-col md:flex-row gap-4"><div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Items</h3>${dragItemsHtml}</div><div id="drop-targets-container" class="w-full md:w-2/3 grid md:grid-cols-1 gap-4 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Descriptions</h3>${dropTargetsHtml}</div></div></div>`;
+                }
+                return questionHtml;
+            }).join('');
+
+            contentArea.innerHTML = `
+                <h1 class="text-4xl font-extrabold text-blue-900 text-center mb-6">${currentQuizType.replace('-', ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</h1>
+                <div class="max-w-4xl mx-auto">
+                    ${quizHtml}
+                    <div id="quiz-results" class="p-6 mt-6 bg-white rounded-xl shadow-lg border border-blue-200 hidden">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-2">Quiz Results</h3>
+                        <p id="score-display" class="text-xl font-semibold text-gray-800"></p>
+                    </div>
+                    <div class="flex justify-center space-x-4 mt-6">
+                        <button onclick="checkAnswers()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Check Answers</button>
+                        <button onclick="resetQuiz()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Reset Quiz</button>
+                    </div>
+                </div>
+            `;
+            
+            if (quizQuestions.some(q => q.type === 'drag_drop')) {
+                setupDragAndDrop();
+            }
+        }
+
+        function setupDragAndDrop() {
+            const dragItems = document.querySelectorAll('.drag-item');
+            const dropTargets = document.querySelectorAll('.drop-target div');
+            let draggedItem = null;
+
+            dragItems.forEach(item => {
+                item.addEventListener('dragstart', e => {
+                    draggedItem = e.target;
+                    e.target.classList.add('dragging');
+                });
+                item.addEventListener('dragend', e => {
+                    e.target.classList.remove('dragging');
+                });
+            });
+
+            dropTargets.forEach(target => {
+                target.addEventListener('dragover', e => {
+                    e.preventDefault();
+                });
+                target.addEventListener('drop', e => {
+                    e.preventDefault();
+                    if (draggedItem) {
+                        const targetDropArea = e.target.closest('.drop-target');
+                        if (targetDropArea) {
+                            if (targetDropArea.querySelector('.drag-item')) {
+                                const oldItem = targetDropArea.querySelector('.drag-item');
+                                oldItem.parentNode.removeChild(oldItem);
+                            }
+                            targetDropArea.querySelector('div').innerHTML = '';
+                            targetDropArea.querySelector('div').appendChild(draggedItem);
+                        }
+                    }
+                });
+            });
+        }
+
+        function checkAnswers() {
+            if (!currentQuizType) return;
+            const quizQuestions = questions[currentQuizType];
+            let score = 0;
+            const contentArea = document.getElementById('content-area');
+
+            quizQuestions.forEach((q, index) => {
+                let isCorrect = false;
+                let questionCard = contentArea.querySelectorAll('.quiz-card')[index];
+                
+                questionCard.classList.remove('correct-answer', 'incorrect-answer');
+
+                if (q.type === 'mcq') {
+                    const selectedOption = contentArea.querySelector(`input[name="q${index}"]:checked`);
+                    if (selectedOption && selectedOption.value === q.answer) {
+                        isCorrect = true;
+                    }
+                } else if (q.type === 'multi-select') {
+                    const selectedOptions = Array.from(contentArea.querySelectorAll(`input[type="checkbox"][name^="q${index}"]:checked`)).map(input => input.value);
+                    isCorrect = JSON.stringify(selectedOptions.sort()) === JSON.stringify(q.answer.sort());
+                } else if (q.type === 'fill_in_the_blank') {
+                    const userAnswer = contentArea.querySelector(`#q${index}-input`).value.trim().toLowerCase();
+                    if (userAnswer === q.answer.toLowerCase()) {
+                        isCorrect = true;
+                    }
+                } else if (q.type === 'drag_drop') {
+                    const dropTargets = contentArea.querySelectorAll(`#drop-targets-container .drop-target`);
+                    let correctMatches = 0;
+                    dropTargets.forEach(target => {
+                        const droppedItem = target.querySelector('.drag-item');
+                        if (droppedItem) {
+                            const droppedId = droppedItem.id.replace('drag-', '');
+                            const targetId = target.id.replace('drop-', '');
+                            if (droppedId === targetId) {
+                                correctMatches++;
+                            }
+                        }
+                    });
+                    isCorrect = correctMatches === q.items.length;
+                }
+
+                if (isCorrect) {
+                    score++;
+                    questionCard.classList.add('correct-answer');
+                } else {
+                    questionCard.classList.add('incorrect-answer');
+                }
+            });
+
+            const resultsContainer = document.getElementById('quiz-results');
+            const scoreDisplay = document.getElementById('score-display');
+            scoreDisplay.textContent = `You scored ${score} out of ${quizQuestions.length}.`;
+            resultsContainer.classList.remove('hidden');
+
+            quizQuestions.forEach((q, index) => {
+                const questionCard = contentArea.querySelectorAll('.quiz-card')[index];
+                if (questionCard.classList.contains('incorrect-answer')) {
+                    const answerDisplay = document.createElement('p');
+                    answerDisplay.className = 'mt-2 text-sm text-red-800 font-medium';
+                    if (q.type === 'mcq') {
+                        answerDisplay.innerHTML = `Correct Answer: <strong>${q.answer}</strong>`;
+                    } else if (q.type === 'multi-select') {
+                        answerDisplay.innerHTML = `Correct Answers: <strong>${q.answer.join(', ')}</strong>`;
+                    } else if (q.type === 'fill_in_the_blank') {
+                        answerDisplay.innerHTML = `Correct Answer: <strong>${q.answer}</strong>`;
+                    } else if (q.type === 'drag_drop') {
+                        let correctPairs = Object.entries(q.answers).map(([key, value]) => `<strong>${key}</strong>: ${value}`);
+                        answerDisplay.innerHTML = `Correct Matches: ${correctPairs.join(' | ')}`;
+                    }
+                    questionCard.appendChild(answerDisplay);
+                }
+            });
+        }
+
+        function resetQuiz() {
+            if (!currentQuizType) return;
+            const quizQuestions = questions[currentQuizType];
+            const resultsContainer = document.getElementById('quiz-results');
+            resultsContainer.classList.add('hidden');
+            renderQuiz(quizQuestions);
+        }
+
+        window.onload = () => loadPage('home');
+    </script>
+</body>
+</html>
