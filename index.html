@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Summer Training Quiz</title>
+    <title>AI Summer Training</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom CSS to enforce blue color degrees and styling */
@@ -21,11 +21,13 @@
         .container-bg {
             background-color: #dbeafe; /* Light blue for containers */
         }
-        .btn-primary {
-            background-color: #3b82f6; /* Medium blue for buttons */
-            color: white;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+       .btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Adds vertical space below each button */
+    margin-bottom: 1rem;
+}
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -62,8 +64,8 @@
 
     <header class="header-bg text-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto p-4 flex flex-col md:flex-row justify-between items-center">
-            <a href="#" onclick="loadPage('home')" class="text-3xl font-bold tracking-tight mb-4 md:mb-0">AI Summer Training
-                <span class="text-blue-300">Quiz</span>
+            <a href="#" onclick="loadPage('home')" class="text-3xl font-bold tracking-tight mb-4 md:mb-0">Mina Zaher - AI Summer Training
+                <span class="text-blue-300">MZ</span>
             </a>
             <ul class="flex flex-wrap justify-center space-x-2 md:space-x-4 text-lg">
                 <li><button onclick="loadPage('home')" class="btn-primary rounded-full px-4 py-2">Home</button></li>
@@ -78,38 +80,38 @@
     </header>
 
     <main id="content-area" class="container mx-auto p-4 md:p-8 mt-8">
-        </main>
+    </main>
 
     <script>
         const pageData = {
             'home': `
                 <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
                     <img src="https://placehold.co/800x200/dbeafe/1e3a8a?text=AI+Summer+Training" alt="AI Summer Training" class="mx-auto rounded-lg mb-6">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 mb-4">Welcome to the EELU AI Training</h1>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 mb-4">Welcome to MZ AI Summer Training</h1>
                     <p class="text-lg md:text-xl text-blue-800 mb-6 max-w-2xl mx-auto">
-                        This interactive quiz platform is designed to help you prepare for your Artificial Intelligence Summer Training at the Egyptian E-Learning University.
+                        This interactive quiz platform is designed to help you prepare for your Artificial Intelligence Summer Training </br>
                         Test your knowledge across various domains of AI.
                     </p>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
                         <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
                             <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 1: AI Problem Definition</h2>
-                            <p class="text-sm text-gray-600">Understand what problem you're solving, why it matters, and how AI fits in.</p>
+                            <p class="text-sm text-gray-600">Understand the problem before building any AI solution.</p>
                         </div>
                         <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
-                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 2: Data Collection Processing and Engineering</h2>
-                            <p class="text-sm text-gray-600">Get high-quality, usable data for AI models. (More content coming soon)</p>
+                            <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 2: Data Collection, Processing, and Engineering</h2>
+                            <p class="text-sm text-gray-600">Gather, clean, and prepare data for AI models.</p>
                         </div>
                         <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
                             <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 3: AI Algorithms and Models</h2>
-                            <p class="text-sm text-gray-600">Know the right algorithms for the task and how to train/tune them. (More content coming soon)</p>
+                            <p class="text-sm text-gray-600">Learn, choose, and train the right AI/ML/DL models.</p>
                         </div>
                         <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
                             <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 4: Application Integration and Deployment</h2>
-                            <p class="text-sm text-gray-600">Make your AI solution usable in a real-world system. (More content coming soon)</p>
+                            <p class="text-sm text-gray-600">Make your AI solution usable in a real-world system/applications.</p>
                         </div>
                         <div class="p-6 bg-white rounded-xl shadow-lg border border-blue-200">
                             <h2 class="text-xl font-bold text-blue-700 mb-2">Domain 5: Maintaining and Monitoring AI Video</h2>
-                            <p class="text-sm text-gray-600">Keep the model accurate, fair, and reliable over time. (More content coming soon)</p>
+                            <p class="text-sm text-gray-600">Ensure models stay accurate and reliable over time.</p>
                         </div>
                     </div>
                 </div>
@@ -118,47 +120,460 @@
                 <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">Contact Information</h1>
                     <p class="text-lg md:text-xl text-blue-800 mb-6 max-w-xl mx-auto">
-                        This material was made by Eng/ Mina Zaher, affiliated with the Egyptian E-Learning University's Faculty of Computers and Information Technology.
+                        This material was made by Eng/ Mina Zaher, </br>
+                        affiliated with the Egyptian E-Learning University's </br>
+                        Faculty of Computers and Information Technology.
                     </p>
                     <div class="text-left max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg border border-blue-200">
-                        <h2 class="text-2xl font-bold text-blue-700 mb-4">Eng/ Mina Zaher</h2>
+                        <h2 class="text-2xl font-bold text-blue-700 mb-4"> Eng. Mina Zaher</h2>
                         <ul class="space-y-2 text-gray-700">
                             <li><span class="font-semibold">University:</span> Egyptian E-Learning University</li>
                             <li><span class="font-semibold">Faculty:</span> Computers and Information Technology</li>
-                            <li><span class="font-semibold">Email:</span> minazaher@eelu.edu.eg (placeholder)</li>
-                            <li><span class="font-semibold">Phone:</span> +20 123 456 7890 (placeholder)</li>
+                            <li><span class="font-semibold">Website:</span> <a href="https://r.search.yahoo.com/_ylt=AwrihaIelKBoFwIA4A9XNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1756563743/RO=10/RU=https%3a%2f%2fwww.eelu.edu.eg%2f/RK=2/RS=xGb0WZ.HWKBuZgZ4qdcuWp1zywY-">
+    eelu.edu.eg
+</a></li>
+                            <li><span class="font-semibold">Email:</span> menazahershafek@gmail.com</li>
+                            <li><span class="font-semibold">Phone:</span> +20 1273934519</li>
                         </ul>
                     </div>
                 </div>
             `
+
+            
         };
 
         const quizSubpages = {
-            'd1q': ['fill-in-the-blank', 'pre-questions', 'post-questions'],
-            'd2q': ['pre-questions', 'post-questions'],
-            'd3q': ['pre-questions', 'post-questions'],
-            'd4q': ['pre-questions', 'post-questions'],
-            'd5q': ['pre-questions', 'post-questions']
+            'd1q': ['d1q_fill-in-the-blank', 'd1q_pre-questions', 'd1q_post-questions'],
+            'd2q': ['d2q_pre-questions', 'd2q_post-questions'],
+            'd3q': ['d3q_pre-questions', 'd3q_post-questions'],
+            'd4q': ['d4q_pre-questions', 'd4q_post-questions'],
+            'd5q': ['d5q_pre-questions', 'd5q_post-questions']
         };
 
         const questions = {
-            'fill-in-the-blank': [
-                { type: 'fill_in_the_blank', question: 'Mean squared error ($MSE$) and mean absolute error ($MAE$) are measures of prediction error.', answer: 'prediction error' },
-                { type: 'fill_in_the_blank', question: 'When an AI model makes a prediction, the difference between the predicted value and the actual value is called the _________.', answer: 'error' },
-                { type: 'fill_in_the_blank', question: 'An AI solution needs to be _________ by an AI expert before being implemented.', answer: 'reviewed' }
-            ],
-            'pre-questions': [
-                { type: 'mcq', question: 'What is the primary purpose of problem framing in AI?', options: ['To select a programming language', 'To identify the type of AI task', 'To design the user interface', 'To gather random data'], answer: 'To identify the type of AI task' },
-                { type: 'mcq', question: 'What is a key consideration in feasibility analysis?', options: ['The budget', 'The time of day', 'The number of team members', 'The color of the dataset'], answer: 'The budget' },
-                { type: 'mcq', question: 'Which of the following is a common success metric for classification models?', options: ['MAE', 'F1-score', 'RMSE', 'R-squared'], answer: 'F1-score' }
-            ],
-            'post-questions': [
-                { type: 'mcq', question: 'What is logistic regression?', options: ['A type of regression that uses ordinal variables as outcomes', 'A type of regression that uses binary, dependent variables as outcomes', 'A type of regression that uses independent variables as outcomes', 'A type of regression that uses continuous variables as outcomes'], answer: 'A type of regression that uses binary, dependent variables as outcomes' },
-                { type: 'mcq', question: 'How can one help ensure AI solutions are not used out of context?', options: ['Encourage people to use AI solutions in multiple different situations', 'Ensure AI solutions are intended for multiple different situations', 'Ensure AI solutions are reviewed by an AI expert before being implemented', 'Clearly communicate the scope and limitations of AI solutions'], answer: 'Clearly communicate the scope and limitations of AI solutions' },
-                { type: 'multi-select', question: 'How can users ensure a network storing data is secure? Choose three answers.', options: ['The network should be behind a firewall', 'The network should be a public connection', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system', 'The network should only be accessible for a limited amount of time'], answer: ['The network should be behind a firewall', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system'] },
-                { type: 'drag_drop', question: 'Match the description of a secure network practice to its name.', items: [{ id: 'firewall', text: 'A security system that controls incoming and outgoing network traffic.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=Firewall' }, { id: 'segmentation', text: 'Dividing a computer network into multiple smaller networks.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=Segmentation' }, { id: 'ids', text: 'A system that monitors a network for malicious activity or policy violations.', image: 'https://placehold.co/150x150/dbeafe/1e3a8a?text=IDS' }], answers: { 'firewall': 'A security system that controls incoming and outgoing network traffic.', 'segmentation': 'Dividing a computer network into multiple smaller networks.', 'ids': 'A system that monitors a network for malicious activity or policy violations.' } }
-            ]
-        };
+            // This is the code you can copy and paste into your existing JavaScript file.
+// It will replace the current content of the 'd1q_fill-in-the-blank' key in the 'questions' object.
+
+'d1q_fill-in-the-blank': [
+    { type: 'fill_in_the_blank', question: 'Mean squared error (MSE) and mean absolute error (MAE) are measures of _________.', answer: 'Prediction error' },
+    { type: 'fill_in_the_blank', question: 'When selecting an algorithm, people should know whether a(n) _________ or a categorization of items is required.', answer: 'Numeric prediction' },
+    { type: 'fill_in_the_blank', question: 'Inputs to an AI model are known as _________.', answer: 'Features' },
+    { type: 'fill_in_the_blank', question: 'Different _________ solve different problems in an AI solution.', answer: 'Algorithms' },
+    { type: 'fill_in_the_blank', question: 'All efforts taken to reach compliance should be _________.', answer: 'Documented' },
+    { type: 'fill_in_the_blank', question: 'People should understand the ethical and _________ concerns associated with sensitive data and know how to handle that data appropriately.', answer: 'Legal' },
+    { type: 'fill_in_the_blank', question: '_________ is the ability to learn, adapt to, and understand concepts and use this knowledge to control the happenings in an environment.', answer: 'Intelligence' },
+    { type: 'fill_in_the_blank', question: 'Classifying data helps determine what data is best for _________ an AI-related problem.', answer: 'Solving' },
+    { type: 'fill_in_the_blank', question: 'An AI expert needs enough business acumen to interpret the requirements for a project, the desired outcome of said project, the data that will be used, and how a(n) _________ is best built and optimized for a solution.', answer: 'Model' },
+    { type: 'fill_in_the_blank', question: '_________ allows an AI system to adjust the resources needed to accommodate the processing demands placed on a system.', answer: 'Scalability' },
+    { type: 'fill_in_the_blank', question: 'A business expert should know what business _________ apply to a possible AI solution, as these create limitations for an AI solution.', answer: 'Constraints' },
+    { type: 'fill_in_the_blank', question: 'People should ensure that gathered data does not violate any privacy laws, security laws, or industry _________.', answer: 'Regulations' },
+    { type: 'fill_in_the_blank', question: 'A lack of _________ could breed suspicion, lead to data misuse, or result in flawed decision-making based on misunderstood results.', answer: 'Transparency' },
+    { type: 'fill_in_the_blank', question: 'When building an AI model, _________ is less critical than expertise regarding the problems being solved.', answer: 'Algorithm expertise' },
+    { type: 'fill_in_the_blank', question: 'A security team should keep up-to-date on _________.', answer: 'Threat intelligence' },
+    { type: 'fill_in_the_blank', question: 'When possible, a(n) _________ should explain how data is collected.', answer: 'AI ethic document' },
+    { type: 'fill_in_the_blank', question: 'An implementation expert needs to know how to engineer and process _________ in an AI model.', answer: 'Data' },
+    { type: 'fill_in_the_blank', question: 'When necessary, one or more individuals should look over data to ensure it is not _________, which skews the results of an AI solution.', answer: 'Biased' },
+    { type: 'fill_in_the_blank', question: 'Before using AI, one should determine the desired _________.', answer: 'Outcome' },
+    { type: 'fill_in_the_blank', question: 'Infrastructure security comes in two primary forms: network security and _________.', answer: 'Physical security' },
+    { type: 'fill_in_the_blank', question: 'Data can be stored securely on-premises, in the _________, or both.', answer: 'Cloud' },
+    { type: 'fill_in_the_blank', question: '_________ may require an organization to publish documents regarding how data is handled.', answer: 'Compliance' },
+    { type: 'fill_in_the_blank', question: 'Once AI risks are identified, one should assess the impact and _________ of each risk.', answer: 'Likelihood' }
+],
+            // This is the code you can copy and paste into your existing JavaScript file.
+// It will replace the current content of the 'd1q_pre-questions' key in the 'questions' object.
+
+'d1q_pre-questions': [
+    { type: 'mcq', question: 'What is artificial intelligence (Al)?', options: ['A. Programmed behaviors of intelligence that automate tasks only when given step-by-step instructions', 'B. Programmed behaviors of intelligence that are the same as human intelligence', 'C. Programmed behaviors of intelligence that are capable of creativity and emotion', 'D. Programmed behaviors of intelligence that can be interpreted as human intelligence'], answer: 'D. Programmed behaviors of intelligence that can be interpreted as human intelligence' },
+    { type: 'mcq', question: 'What is linear regression?', options: ['A. A type of regression that uses continuous variables as outcomes', 'B. A type of regression that uses binary dependent variables as outcomes', 'C. A type of regression that uses independent variables as outcomes', 'D. A type of regression that uses ordinal variables as outcomes'], answer: 'A. A type of regression that uses continuous variables as outcomes' },
+    { type: 'mcq', question: 'Why should users take steps to reduce bias in Al models?', options: ['A. Bias can lead to inaccurate results that exclude certain groups', 'B. Bias can lead to costly solutions', 'C. Bias can cause an Al model to stop producing results', 'D. Bias can produce incorrect results'], answer: 'A. Bias can lead to inaccurate results that exclude certain groups' },
+    { type: 'mcq', question: 'What is feature selection?', options: ['A. A process that searches for new features to add to an Al project', 'B. A process that creates new features based on an Al project', 'C. A process that determines what features will be used in an Al project', 'D. A process that determines what features are compatible with one another within an Al project'], answer: 'C. A process that determines what features will be used in an Al project' },
+    { type: 'mcq', question: 'What does the principle of least privilege state?', options: ['A. People should have access to what they need to perform their job functions and no more', 'B. Only an Al model should have access to data', 'C. People should have access to all information as long as it is not identified as sensitive data', 'D. People should have access to information as long as it is not currently being used by an Al model'], answer: 'A. People should have access to what they need to perform their job functions and no more' },
+    { type: 'mcq', question: 'What is the purpose of Area Under the Receiver Operating Characteristic Curve (AUC-ROC)?', options: ['A. It measures how well an Al model can distinguish between classes', 'B. It measures how precise an Al model is', 'C. It measures how fast an Al model is', 'D. It measures how many outputs an Al model will give'], answer: 'A. It measures how well an Al model can distinguish between classes' },
+    { type: 'mcq', question: 'What do many Al solutions require to develop those solutions best?', options: ['A. Knowledge of APIs', 'B. Knowledge of a statistical analysis software', 'C. Knowledge of a programming language', 'D. Knowledge of operating systems'], answer: 'C. Knowledge of a programming language' },
+    { type: 'mcq', question: 'For network security, what should happen to data stored on a server?', options: ['A. It should be backed up', 'B. It should be encrypted', 'C. It should be stored in multiple locations', 'D. It should be accessible by all users within an organization'], answer: 'B. It should be encrypted' },
+    { type: 'mcq', question: 'As part of ethics and data gathering, what idea should be assumed?', options: ['A. No data can be used without altering it', 'B. No data is part of the public domain unless proven otherwise', 'C. Data should only be collected from well-known organizations', 'D. Data should never be stored'], answer: 'B. No data is part of the public domain unless proven otherwise' }
+],
+            // This is the code you can copy and paste into your existing JavaScript file.
+// It will replace the current content of the 'd1q_post-questions' key in the 'questions' object.
+
+'d1q_post-questions': [
+    { type: 'mcq', question: 'What happens to an F1 score if the precision or recall metric is low?', options: ['The F1 score will be low', 'The F1 score will be equal to the higher metric', 'The F1 score cannot be calculated if the precision or recall metric is low', 'The F1 score will be high'], answer: 'The F1 score will be low' },
+    { type: 'multi-select', question: 'Which two statements about AI inputs and outputs are true?', options: ['Outputs can be a numeric value or a classification', 'Features are the expected values for an AI model to predict', 'Outputs should be determined before inputs', 'Features cannot include text', 'Features are often numerical'], answer: ['Outputs can be a numeric value or a classification', 'Features are often numerical'] },
+{
+    type: 'drag_drop',
+    question: 'Match the data type to its description.',
+    items: [
+        { id: 'labeled_data', text: 'Labeled data' },
+        { id: 'unlabeled_data', text: 'Unlabeled data' }
+    ],
+    answers: {
+        'labeled_data': 'Paired with output targets',
+        'unlabeled_data': 'Has no target values'
+    }
+},    
+    { type: 'multi-select', question: 'What are three downsides to AI?', options: ['AI can be expensive', 'AI results can be wrong due to problems with algorithms or data', 'AI cannot be scaled', 'AI cannot manage analytics', 'AI can lead to less Privacy'], answer: ['AI can be expensive', 'AI results can be wrong due to problems with algorithms or data', 'AI can lead to less Privacy'] },
+    { type: 'multi-select', question: 'What three actions should one take to ensure legal requirements are met when using AI?', options: ['Consult a legal expert', 'Review existing data governance policies', 'Research applicable laws and regulations', 'Store secure data in the cloud', 'Store data in multiple locations'], answer: ['Consult a legal expert', 'Review existing data governance policies', 'Research applicable laws and regulations'] },
+    { type: 'multi-select', question: 'What are three uses for AI?', options: ['Managing employees', 'Managing customer service inquiries', 'Analyzing information', 'Creating relationships with customers', 'Automating tasks'], answer: ['Managing customer service inquiries', 'Analyzing information', 'Automating tasks'] },
+{
+    type: 'drag_drop',
+    question: 'Match the AI problem to its description.',
+    items: [
+        { id: 'unsupervised_problems', text: 'Unsupervised problems' },
+        { id: 'classification_problems', text: 'Classification problems' },
+        { id: 'regression_problems', text: 'Regression problems' },
+        { id: 'reinforcement_problems', text: 'Reinforcement problems' }
+    ],
+    answers: {
+        'unsupervised_problems': 'Find hidden patterns and structures in data',
+        'classification_problems': 'Involve categorizing the results',
+        'regression_problems': 'Evaluate the relationship between an independent variable and dependent variable',
+        'reinforcement_problems': 'Involve AI performing actions to maximize a reward'
+    }
+},    
+    { type: 'mcq', question: 'What is Role-Based Access Control (RBAC)?', options: ['A control that assigns people to roles, and those roles create their own permissions', 'A control that assigns people to roles that exist in groups with designated permissions', 'A control that assigns permissions based on rules created by users', 'A control that assigns permissions based on a list of rules'], answer: 'A control that assigns people to roles that exist in groups with designated permissions' },
+    { type: 'mcq', question: 'What should business expertise start with?', options: ['Creating a timeline of when AI will solve the problem', 'Creating an outline of how the AI model should function', 'Understanding what problem AI will be used to solve', 'Understanding how to create relevant algorithms'], answer: 'Understanding what problem AI will be used to solve' },
+    { type: 'multi-select', question: 'Besides permissions, what should an organization implement to protect its on-premises data? Choose two answers.', options: ['The data should be stored in multiple physical locations', 'Access to the data should be audited', 'The data should be accessible for a limited amount of time', 'People should be recorded on video when accessing the data'], answer: ['Access to the data should be audited', 'The data should be stored in multiple physical locations'] },
+    { type: 'mcq', question: 'How can a user help mitigate bias from affecting AI results?', options: ['Perform a bias assessment of data', 'Run an algorithm to mitigate bias in the AI model', 'Ensure no people have access to data', 'Ensure no people have access to the AI algorithms being used'], answer: 'Perform a bias assessment of data' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the metric to its description.', 
+    items: [
+        { id: 'accuracy', text: 'Accuracy' }, 
+        { id: 'precision', text: 'Precision' }, 
+        { id: 'recall', text: 'Recall' }
+    ], 
+    answers: { 
+        'accuracy': 'The percentage of predictions an AI model gets right in an outcome', 
+        'precision': 'The percentage of true positive predictions among all positive predictions in an outcome', 
+        'recall': 'The percentage of true positive predictions among all actual positives in an outcome' 
+    } 
+},
+    { type: 'mcq', question: 'How can one help ensure people interpret AI results correctly?', options: ['Be prepared to explain every part of the AI algorithm', 'Be prepared to add additional algorithms that simplify the data and results', 'Be prepared to change the AI algorithm if people misinterpret results', 'Be prepared to explain the AI algorithm in user-friendly terms'], answer: 'Be prepared to explain the AI algorithm in user-friendly terms' },
+    { type: 'multi-select', question: 'What are three upsides to AI?', options: ['AI can manage creative business needs', 'AI is free of cost', 'AI can help improve organizational decision-making', 'AI can help reduce human error', 'AI is scalable'], answer: ['AI can help improve organizational decision-making', 'AI can help reduce human error', 'AI is scalable'] },
+    { type: 'multi-select', question: 'What does an implementation expert need to know to implement an AI solution? Choose two answers.', options: ['Business constraints', 'AI techniques', 'AI algorithms', 'Al costs', 'Business problems'], answer: ['AI techniques', 'AI algorithms'] },
+    { type: 'multi-select', question: 'When should a business consider buying or developing AI solutions? Choose two answers.', options: ['When the business believes the AI will provide a high return on investment', 'When the business believes the AI will replace employees', 'When the business believes the AI will create new products for the business', 'When the business believes the AI will improve business processes', 'When the business believes they will analyze historical data often'], answer: ['When the business believes the AI will provide a high return on investment', 'When the business believes the AI will improve business processes'] },
+    { type: 'multi-select', question: 'How can one decide who should have access to AI results? Choose three answers.', options: ['Consider the purpose of the results', 'Evaluate the type of algorithm used', 'Consider the cost of the solution', 'Identify stakeholders', 'Consider the context of the solution'], answer: ['Consider the purpose of the results', 'Identify stakeholders', 'Consider the context of the solution'] },
+    { type: 'multi-select', question: 'What should be included in a transparency document? Choose two answers.', options: ['Cost of the AI solution', 'How collected data can help solve an AI problem', 'A reason for collecting data', 'A copy of the AI algorithm', 'Instructions for how to access collected data'], answer: ['How collected data can help solve an AI problem', 'A reason for collecting data'] },
+    { type: 'multi-select', question: 'What is the purpose of a subject-matter expert when building an AI model? Choose two answers.', options: ['To provide financial expertise', 'To provide expertise on the problems being solved', 'To provide technical expertise', 'To provide expertise on data security and privacy', 'To provide expertise on creating AI algorithms'], answer: ['To provide expertise on the problems being solved', 'To provide expertise on data security and privacy'] },
+    { type: 'multi-select', question: 'What is necessary for effective and ethical AI implementation? Choose three answers.', options: ['Ongoing dialogue', 'Transparency', 'User information', 'Algorithm changes', 'Clear communication'], answer: ['Ongoing dialogue', 'Transparency', 'Clear communication'] },
+    { type: 'multi-select', question: 'What two items should organizations create to minimize risks associated with AI?', options: ['A risk prediction AI model', 'A risk register', 'A risk mitigation strategy', 'An AI-generated list of risks', 'A risk management fund'], answer: ['A risk register', 'A risk mitigation strategy'] },
+    { type: 'mcq', question: 'What does R-squared measure?', options: ['The accuracy of an AI model', 'The number of dependent variables', 'The correlation between dependent and independent variables', 'The number of independent variables'], answer: 'The correlation between dependent and independent variables' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the risk identification method to its description.', 
+    items: [
+        { id: 'risk_assessment', text: 'Risk assessment' }, 
+        { id: 'threat_modeling', text: 'Threat modeling' }
+    ], 
+    answers: { 
+        'risk_assessment': 'Identifies potential issues with an AI model, such as the likelihood that a model will fall to certain types of attacks', 
+        'threat_modeling': 'Involves assessing potential threats to an AI model and vulnerabilities in a system' 
+    } 
+},
+    { type: 'mcq', question: 'When gathering data, how can people help ensure the data is accurate?', options: ['Only collect data from local participants', 'Add new data to balance out the older data', 'Limit the type of data that can be entered', 'Change data when it seems inaccurate'], answer: 'Add new data to balance out the older data' },
+
+    {type: 'drag_drop', 
+    question: 'Arrange the steps an AI expert should take when creating an AI solution in the correct order.', 
+    items: [
+        { id: 'Understand the requirements of the AI project', text: 'Understand the requirements of the AI project' },
+        { id: 'Transform data to build an AI model', text: 'Transform data to build an AI model' },
+        { id: 'Decide which algorithms are best for an AI solution', text: 'Decide which algorithms are best for an AI solution' }
+    ],
+    answers: { 'Understand the requirements of the AI project': 'Position 1', 'Position_2': 'Transform data to build an AI model', 'Decide which algorithms are best for an AI solution': 'Position 3' }},
+    { type: 'mcq', question: 'How can one help ensure AI solutions are not used out of context?', options: ['Encourage people to use AI solutions in multiple different situations', 'Ensure AI solutions are intended for multiple different situations', 'Ensure AI solutions are reviewed by an AI expert before being implemented', 'Clearly communicate the scope and limitations of AI solutions'], answer: 'Clearly communicate the scope and limitations of AI solutions' },
+    { type: 'mcq', question: 'What is logistic regression?', options: ['A type of regression that uses ordinal variables as outcomes', 'A type of regression that uses binary, dependent variables as outcomes', 'A type of regression that uses independent variables as outcomes', 'A type of regression that uses continuous us variables as outcomes'], answer: 'A type of regression that uses binary, dependent variables as outcomes' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the principle to its description.', 
+    items: [
+        { id: 'ethics_and_fairness', text: 'Ethics and fairness' }, 
+        { id: 'empowering_users', text: 'Empowering users' }, 
+        { id: 'accessibility', text: 'Accessibility' }, 
+        { id: 'transparency_and_explainability', text: 'Transparency and explainability' }
+    ], 
+    answers: { 
+        'ethics_and_fairness': 'AI algorithms should promote impartiality and avoid bias', 
+        'empowering_users': 'When possible, users should have some degree of control over selecting an AI algorithm', 
+        'accessibility': 'AI algorithms should provide solutions that people with varying degrees of technical proficiency can use', 
+        'transparency_and_explainability': 'AI algorithms should provide an optimal balance between accuracy and interpretability' 
+    } 
+},    { type: 'multi-select', question: 'How can users ensure a network storing data is secure? Choose three answers.', options: ['The network should be behind a firewall', 'The network should be a public connection', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system', 'The network should only be accessible for a limited amount of time'], answer: ['The network should be behind a firewall', 'The network should be segmented', 'The network should be equipped with an intrusion detection or prevention system'] }
+],
+            'd2q_pre-questions': [
+    { type: 'mcq', question: 'What happens if data exists in multiple locations when building AI-specific data sets?', options: ['The data needs to be imported and transformed into a single dataset', 'New data needs to be collected from a single location instead', 'One dataset needs to be chosen as a primary dataset', 'New data needs to be created'], answer: 'The data needs to be imported and transformed into a single dataset' },
+    { type: 'mcq', question: 'After data is collected for use with an AI model, what is the next step?', options: ['Determining the data type', 'Determining the characteristics of the data', 'Looking for missing or corrupt data elements', 'Assessing the quality of the data'], answer: 'Assessing the quality of the data' },
+    { type: 'mcq', question: 'Why would data collected for an AI model need to be converted into binary?', options: ['To make looking for corrupt or missing data easier', 'So the data is a more manageable size', 'To ensure there is enough data', 'So the AI model understands it'], answer: 'So the AI model understands it' },
+    { type: 'mcq', question: 'When might one choose a local AI hosting solution for their data?', options: ['When data is particularly sensitive and requires stringent security controls', 'When a project requires extensive computational power', 'When everyone using the data is in one location', 'When they want lower initial cost and lower maintenance'], answer: 'When data is particularly sensitive and requires stringent security controls' },
+    { type: 'mcq', question: 'What is a white paper?', options: ['A troubleshooting guide for Al models', 'A comprehensive document serving as a complete reference for an Al project, outlining its design, implementation, and outcomes', 'A procedure with a sequence of operations', 'A report identifying irrelevant correlations in a data set'], answer: 'A comprehensive document serving as a complete reference for an Al project, outlining its design, implementation, and outcomes' },
+    { type: 'mcq', question: 'What does processing a data set involve?', options: ['Transforming and manipulating data to ensure it is ready to be in an AI model', 'Building initial vector features for an AI model', 'Creating a true picture of a real-life situation in which data is entered into an AI model', 'Ensuring data sets are large enough to build an unbiased AI model'], answer: 'Transforming and manipulating data to ensure it is ready to be in an AI model' },
+    { type: 'mcq', question: 'What is a feature vector?', options: ['An ordered list of numerical properties of observed phenomena', 'A characteristic of data, such as numeric, string, or date', 'A repository used to store code for development projects', 'A tool used to cleanse data to ready it for an AI learning model'], answer: 'An ordered list of numerical properties of observed phenomena' }
+],
+            'd2q_post-questions': [
+    { type: 'mcq', question: 'Why are feature vectors needed?', options: ['To ensure data integrity so an AI model can make accurate predictions', 'To ensure a data set is large enough to create an unbiased AI model', 'To ensure data is balanced so an AI model can make accurate predictions', 'To convert data into machine-readable format so that an A1 model can make informed predictions'], answer: 'To convert data into machine-readable format so that an A1 model can make informed predictions' },
+    { type: 'multi-select', question: 'What are some important positive aspects of assessing data quality? Choose three answers.', options: ['Does it contain personal information', 'Is it complete', 'Is it large enough to produce results without being too large', 'Is it balanced', 'Does it have corrupt elements'], answer: ['Is it complete', 'Is it balanced', 'Does it have corrupt elements'] },
+    { type: 'mcq', question: 'What is the most important question to answer when determining which features to use in AI machine learning?', options: ['Is this feature expensive to use?', 'Is this feature big enough?', 'Does this feature impact the outcome and help the model is performance?', 'Does this feature make the AI model look better?'], answer: 'Does this feature impact the outcome and help the model is performance?' },
+    { type: 'mcq', question: 'What is the first consideration for data when working with an AI model?', options: ['Data quality', 'Data corruption', 'Data representation', 'Data type'], answer: 'Data quality' },
+    { type: 'multi-select', question: 'Which statements regarding data set size are true? Choose three answers.', options: ['There is a set percentage of statistical data that one must adhere to when collecting data', 'The size of a data set is important', 'The size of a data set is not important', 'The amount of data collected must be sufficient to build an unbiased A1 model', 'If there is not enough data for a data set, one should consider increasing the number of sources used'], answer: ['The size of a data set is important', 'The amount of data collected must be sufficient to build an unbiased A1 model', 'If there is not enough data for a data set, one should consider increasing the number of sources used'] },
+    { type: 'mcq', question: 'A recreational area is starting a new hiker\'s program and wants to group people based on experience level. No data currently exists to show these categories. What is the best way to collect this data?', options: ['Surveys from existing hikers', 'Data from an IoT device', 'A web crawler to extract data from websites', 'Records of the number of existing hikers'], answer: 'Surveys from existing hikers' },
+    { type: 'multi-select', question: 'Which three statements regarding a data test set are true?', options: ['It should include proper representation of each category or class of data', 'It should be used to train an AI model', 'It should be updated accordingly as data changes', 'Its records should be kept with the training set records throughout the AI building process', 'It should include random sampling of data'], answer: ['It should include proper representation of each category or class of data', 'It should be updated accordingly as data changes', 'It should include random sampling of data'] },
+    { type: 'multi-select', question: 'The data set an A1 model accesses usually comes in which two forms?', options: ['Training and assessment', 'Numerical and alphabetical', 'Beta and production', 'Training and testing'], answer: ['Training and testing'] },
+{
+    type: 'drag_drop',
+    question: 'Match the area of importance in documenting data decisions to its definition.',
+    items: [
+        { id: 'assumptions', text: 'Assumptions' },
+        { id: 'predicates', text: 'Predicates' },
+        { id: 'constraints', text: 'Constraints' }
+    ],
+    answers: {
+        'assumptions': 'Beliefs or conditions taken to be true for a system to work as intended',
+        'predicates': 'Logical statements or conditions defining properties or relationships between different entities in an AI system',
+        'constraints': 'Restrictions on an AI system'
+    }
+},
+    { type: 'multi-select', question: 'Which three statements regarding data for the data collection process are true?', options: ['It must be a good starting point for an AI model or it cannot be used', 'It should contain personal information', 'It should be as free from bias as possible', 'It should be relevant to the problem being solved', 'It needs to be large enough to produce solid outcomes'], answer: ['It should be as free from bias as possible', 'It should be relevant to the problem being solved', 'It needs to be large enough to produce solid outcomes'] },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the type of data collection bias to its description.', 
+    items: [
+        { id: 'selection_bias', text: 'Selection bias' }, 
+        { id: 'observer_bias', text: 'Observer bias' }, 
+        { id: 'digital_divide_bias', text: 'Digital divide bias' }, 
+        { id: 'historical_bias', text: 'Historical bias' }
+    ], 
+    answers: { 
+        'selection_bias': 'When the data collected does not represent the entire population intended to be analyzed', 
+        'observer_bias': 'When subjective interpretation influences the data being collected', 
+        'digital_divide_bias': 'When the needs and opinions of those with limited access to or ability with technology are overlooked', 
+        'historical_bias': 'When data is only collected at a special time rather than at all times of the year' 
+    } 
+},
+    { type: 'mcq', question: 'What is the purpose of randomizing data when building training and testing data sets?', options: ['To get a true picture of a real-life situation for data entry into an AI model', 'To ensure the AI model does not become confused when making predictions', 'To ensure data is error-free', 'To ensure the data sets are large enough to build an unbiased AI model'], answer: 'To get a true picture of a real-life situation for data entry into an AI model' },
+    { type: 'mcq', question: 'What is involved in deep transparency?', options: ['a. Retraining a model to use different settings, such as parameters', 'b. Keeping track of important details such as algorithms, data, interpretability, auditing, and accountability', 'c. Managing customer expectations by not over-promising', 'd. Building one or more connections between AI and data, specifically the applications with the data being used to develop an AI model'], answer: 'b. Keeping track of important details such as algorithms, data, interpretability, auditing, and accountability' },
+    { 
+    type: 'drag_drop', 
+    question: 'Arrange the steps for feature engineering in the correct order.', 
+    items: [
+        { id: 'Double-check that the features used are relevant to the solution', text: 'Double-check that the features used are relevant to the solution' },
+        { id: 'Categorize features into different types', text: 'Categorize features into different types' },
+        { id: 'Transform any data not in the best format', text: 'Transform any data not in the best format' },
+        { id: 'Validate transformations to ensure they will help build an accurate an AI model as possible', text: 'Validate transformations to ensure they will help build an accurate an AI model as possible' }
+    ], 
+    answers: { 
+        'Double-check that the features used are relevant to the solution': 'Position 1', 
+        'Categorize features into different types': 'Position 2', 
+        'Transform any data not in the best format': 'Position 3', 
+        'Validate transformations to ensure they will help build an accurate an AI model as possible': 'Position 4' 
+    } 
+},
+{ 
+    type: 'drag_drop', 
+    question: 'Match the appropriate technique or tool with the data quality issue it handles.', 
+    items: [
+        { id: 'anomaly_detection_techniques', text: 'Anomaly detection techniques' }, 
+        { id: 'consistency_checks', text: 'Consistency checks' }, 
+        { id: 'imputation_methods', text: 'Imputation methods' }, 
+        { id: 'cybersecurity_measures', text: 'Cybersecurity measures' }
+    ], 
+    answers: { 
+        'anomaly_detection_techniques': 'Data corruption', 
+        'consistency_checks': 'Misaligned data', 
+        'imputation_methods': 'Missing data', 
+        'cybersecurity_measures': 'External threats such as viruses' 
+    } 
+},
+    { type: 'multi-select', question: 'Why is it important to consult a relevant subject-matter expert in the field an AI model\'s solution is designed for? Choose two answers:', options: ['To verify that the features selected for the model are valid', 'To have them test the A1 model for us', 'To build initial vector features for an AI model', 'To ask them to write programming code for the AI model', 'To identify any key features involving demographic information'], answer: ['To verify that the features selected for the model are valid', 'To identify any key features involving demographic information'] },
+    { type: 'mcq', question: 'What are tokens in relation to AI building?', options: ['Smaller units of words and sentences', 'Smaller units of time', 'Numerical representations of data', 'Part of the Python programming language'], answer: 'Smaller units of words and sentences' },
+    { type: 'multi-select', question: 'Which statements regarding feature vectors are true? Choose three answers.', options: ['They help ensure a data set is large enough to create an unbiased AI model', 'They can be numerical or categorical', 'Inconsistencies in vectors will cause inconsistencies within AI predictions', 'Multiple feature vectors across features need to be scaled properly', 'They can only be numerical'], answer: ['They can be numerical or categorical', 'Inconsistencies in vectors will cause inconsistencies within AI predictions', 'Multiple feature vectors across features need to be scaled properly'] },
+    { type: 'multi-select', question: 'Which statements regarding cloud-based AI hosting solutions are true? Choose three answers', options: ['There is no need to maintain physical servers', 'They offer greater control and data security', 'The come with a higher initial investment and maintenance cost', 'They offer scalable resources', 'They have the advantage of built-in tools and services for AI and machine learning'], answer: ['There is no need to maintain physical servers', 'They offer scalable resources', 'They have the advantage of built-in tools and services for AI and machine learning'] },
+    { type: 'multi-select', question: 'What are three budget considerations when planning an AI project?', options: ['Legal requirements specific to the industry for which the AI model is being used', 'Guidelines used for algorithm selection', 'Cost-benefit analysis to ensure a solid return on investment', 'Equipment for testing, processing, and running an AI model', 'Technological and human resources needed'], answer: ['Cost-benefit analysis to ensure a solid return on investment', 'Equipment for testing, processing, and running an AI model', 'Technological and human resources needed'] },
+// question 21 which is a graphical question
+{
+    type: 'mcq',
+    question: 'Which column of data requires processing?',
+    options: [
+        'Snow',
+        'Wind Speed (13 N, 24 W, 14 MPH S)',
+        'Temperature (23, 40, 35)',
+        'Humidity (68, 50, 57)',
+        'Wind (13N, 24W, 2E)'
+    ],
+    answer: 'Wind Speed (13 N, 24 W, 14 MPH S)'
+},
+    { type: 'multi-select', question: 'Which three statements are true regarding converting data to a format AI can process?', options: ['Data needs to be converted to all share the same data type', 'Many AI systems require images to be converted to binary to recognize them', 'Conversion may be done for you by some software', 'AI systems can be programmed to take images and render them into binary numbers for proper rendering', 'Data needs to be turned into tokens'], answer: ['Conversion may be done for you by some software', 'AI systems can be programmed to take images and render them into binary numbers for proper rendering', 'Data needs to be turned into tokens'] },
+],
+            'd3q_pre-questions': [
+    { type: 'multi-select', question: 'How can AI developers ensure they comply with regulatory requirements? Choose three answers.', options: ['Store data in multiple locations', 'Have metrics and tools in place that will analyze system performance concerning regulatory compliance', 'Put one person in charge of managing regulatory compliance', 'Understand what the regulatory requirements are', 'Define thresholds and requirements for AI systems relevant to regulatory requirements'], answer: ['Have metrics and tools in place that will analyze system performance concerning regulatory compliance', 'Understand what the regulatory requirements are', 'Define thresholds and requirements for AI systems relevant to regulatory requirements'] },
+    { type: 'multi-select', question: 'What are three factors to consider when evaluating an AI model?', options: ['Trends', 'Speed', 'Cost', 'Outcomes', 'Size'], answer: ['Speed', 'Cost', 'Outcomes'] },
+    { type: 'mcq', question: 'To best evaluate a model, a separate data set from what is used for training should be used.', options: ['True', 'False'], answer: 'True' },
+    { type: 'mcq', question: 'What is an algorithm?', options: ['The relative change of a model and its output', 'An ordered list of numerical properties of observed phenomena', 'A procedure with a sequence of operations', 'Data gathered on an AI model and used to ensure that an AI model is working properly'], answer: 'A procedure with a sequence of operations' },
+    { type: 'mcq', question: 'Sensitivity refers to how well a model identifies negative instances, while specificity refers to how well a model identifies positive instances.', options: ['True', 'False'], answer: 'False' },
+    { type: 'mcq', question: 'What is a self-fulfilling prophecy?', options: ['An algorithm that identifies and removes existing patterns in data', 'An algorithm that reinforces and magnifies existing patterns in data', 'An algorithm that only looks for and uses data that supports an existing idea', 'An algorithm that uses data collected from samples that do not accurately represent the population'], answer: 'An algorithm that reinforces and magnifies existing patterns in data' },
+    { type: 'mcq', question: 'New testing data should be introduced to a model as-is to test robustness.', options: ['True', 'False'], answer: 'True' },
+    { type: 'mcq', question: 'Stakeholder approval often stems from AI developers producing testing results that are easy to understand.', options: ['True', 'False'], answer: 'True' }
+],
+            'd3q_post-questions': [
+    { type: 'mcq', question: 'What is an iteration?', options: ['A series of steps used to transform data used for an AI model into a final prediction or outcome', 'A chart or report that explains the results of an AI model or the data used to build it', 'A sequence of retraining a model using different settings, such as different parameters', 'Data that is paired with output targets in an AI model'], answer: 'A sequence of retraining a model using different settings, such as different parameters' },
+    { type: 'mcq', question: 'What is specificity?', options: ['The ability of an algorithm to classify data accurately', 'The relative change of a model\'s output when data is input', 'The ability of an algorithm to identify nonrelevant outputs accurately', 'The relative change of a model\'s output when the data set is changed'], answer: 'The ability of an algorithm to identify nonrelevant outputs accurately' },
+    { type: 'mcq', question: 'What is the purpose of using new data to test a model?', options: ['To create baseline metrics for the model', 'To determine trends in the data outputted by the model', 'To verify the performance of the AI model', 'To confirm that all data is formatted correctly'], answer: 'To verify the performance of the AI model' },
+    { type: 'multi-select', question: 'What are two ways to use trends while evaluating data?', options: ['Confirming adherence to regulations', 'Evaluating algorithmic families', 'Making predictions', 'Detecting anomalies', 'Testing the specificity of a model'], answer: ['Making predictions', 'Detecting anomalies'] },
+    { type: 'mcq', question: 'What does accuracy measure?', options: ['The proportion of correctly predicted negative instances out of all instances with negative predictions', 'The proportion of correctly predicted positive instances out of all positive instances', 'The proportion of correctly predicted positive instances out of all instances with positive predictions', 'The overall correctness of a model\'s predictions'], answer: 'The overall correctness of a model\'s predictions' },
+    { type: 'mcq', question: 'Why should performance metrics be gathered on an AI model?', options: ['To determine which algorithm is being used', 'To demonstrate the limitations of the model', 'To promote transparency and ethical use of an AI system', 'To ensure it is working properly'], answer: 'To ensure it is working properly' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the algorithm family to its description.', 
+    items: [
+        { id: 'reinforcement_learning', text: 'Reinforcement Learning' }, 
+        { id: 'unsupervised_learning', text: 'Unsupervised Learning' }, 
+        { id: 'deep_learning', text: 'Deep Learning' }, 
+        { id: 'supervised_learning', text: 'Supervised Learning' }
+    ], 
+    answers: { 
+        'reinforcement_learning': 'Learns from interacting with its environment and receiving rewards or penalties', 
+        'unsupervised_learning': 'Works with unlabeled data to uncover unknown, hidden patterns or structures in the data', 
+        'deep_learning': 'Uses neural networks with AI models for human-based interactions', 
+        'supervised_learning': 'Uses labeled data where a target variable is known' 
+    } 
+},
+    { type: 'mcq', question: 'What is sensitivity?', options: ['The relative change of a model\'s output when data is input', 'The ability of an algorithm to accurately classify data', 'The ability of an algorithm to accurately identify nonrelevant outputs', 'The relative change of a model\'s output when the data set is changed'], answer: 'The ability of an algorithm to accurately classify data' },
+    { type: 'mcq', question: 'What is the purpose of data visualizations?', options: ['To clean and sanitize data that will be used to train a model', 'To summarize data in an easily understandable manner', 'To establish key performance indicators', 'To estimate the cost of an AI model'], answer: 'To summarize data in an easily understandable manner' },
+    { type: 'mcq', question: 'What is an explainable algorithm?', options: ['Algorithm inputs that are connected to AI model training data', 'Algorithm inputs that are connected to real-world populations', 'Algorithm results that are connected to algorithm inputs rather than extraneous or incorrectly interpreted features', 'Algorithm results that are connected to extraneous or incorrectly interpreted features rather than algorithm inputs'], answer: 'Algorithm results that are connected to algorithm inputs rather than extraneous or incorrectly interpreted features' },
+    { type: 'multi-select', question: 'What should be included when documenting regulatory requirements? Choose four answers.', options: ['Amount of stored data', 'Evaluation methods', 'Compliance measures', 'Security procedures', 'Corrective actions for noncompliance', 'Financial cost'], answer: ['Evaluation methods', 'Compliance measures', 'Security procedures', 'Corrective actions for noncompliance'] },
+    { type: 'mcq', question: 'What factor is being evaluated when an organization needs a cloud to build its AI model?', options: ['Speed', 'Outcomes it is producing', 'Cost', 'Trends'], answer: 'Cost' },
+    { type: 'mcq', question: 'Which statement best defines a stakeholder?', options: ['An individual, group, or organization that may affect, be affected by, or perceive itself to be affected by a project', 'An individual that perceives themselves to be affected by a project', 'An individual, group, or organization that may affect a project', 'An individual, group, or organization that may be affected by a project'], answer: 'An individual, group, or organization that may affect, be affected by, or perceive itself to be affected by a project' },
+    { type: 'multi-select', question: 'How can one reduce imbalances in data? Choose two answers.', options: ['Remove certain data', 'Replace certain data', 'Collect more data', 'Create multiple instances of certain data within a dataset'], answer: ['Collect more data', 'Create multiple instances of certain data within a dataset'] },
+    { type: 'mcq', question: 'When does underfitting occur?', options: ['When a model does not capture underlying patterns in data and thus performs poorly on training data or new, unseen data', 'When a model generates a large number of false positives', 'When a model learns training data very well but performs poorly on new, unseen data', 'When a small change in the input data leads to a significant change in the output'], answer: 'When a model does not capture underlying patterns in data and thus performs poorly on training data or new, unseen data' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the algorithm to its definition.', 
+    items: [
+        { id: 'decision_tree_algorithm', text: 'Decision Tree Algorithm' }, 
+        { id: 'neural_network', text: 'Neural Network' }, 
+        { id: 'k_means_clustering', text: 'K-Means Clustering' }
+    ], 
+    answers: { 
+        'decision_tree_algorithm': 'A supervised learning method in which samples are split into two or more sets based on input variable differentiators', 
+        'neural_network': 'An algorithm designed to mimic the human brain that uses artificial neurons to recognize and obtain information', 
+        'k_means_clustering': 'An unsupervised learning method that helps split data into an unspecified number of groups' 
+    } 
+},
+    { type: 'multi-select', question: 'What should happen during session meetings for evaluating AI solutions? Choose three answers.', options: ['Define objectives for the session', 'Have materials ready that describe the AI solution', 'Ensure there is an opportunity for discussion', 'Ensure every attendee understands all parts of the algorithms used in the project', 'Begin implementing at least one AI solution'], answer: ['Define objectives for the session', 'Have materials ready that describe the AI solution', 'Ensure there is an opportunity for discussion'] },
+    // question 18 which is a graphical question
+    {
+    type: 'mcq',
+    question: 'Given the following correlations:<ul><li>Correlation between the number of boaters and temperature: 0.61</li><li>Correlation between the number of boaters and wind: -0.19</li></ul>What is the correlation between the number of boaters and temperature?',
+    options: [
+        'There is a somewhat positive correlation',
+        'There is a perfect negative correlation',
+        'There is a somewhat negative correlation',
+        'There is a perfect positive correlation'
+    ],
+    answer: 'There is a somewhat positive correlation'
+},
+    { type: 'mcq', question: 'What is the purpose of an AI model\'s training data?', options: ['To ensure the AI model is accurate', 'To ensure the AI model is unbiased', 'To ensure the AI model can make predictions', 'To ensure the AI model can be deployed'], answer: 'To ensure the AI model can make predictions' },
+    { type: 'multi-select', question: 'Which two facts about visualizations are true?', options: ['Any visualization created from AI data will be useful in making business decisions', 'Visualizations are used to verify the specificity of a model', 'The precision of a model can be determined using visualizations', 'Visualizations should help determine whether an AI model is accurate', 'One needs to understand the criteria of the decisions to be made when assessing visuals'], answer: ['Visualizations should help determine whether an AI model is accurate', 'One needs to understand the criteria of the decisions to be made when assessing visuals'] },
+    { type: 'multi-select', question: 'How should AI developers handle instances of noncompliance? Choose three answers.', options: ['Perform fewer audits of logged activity', 'Take additional security measures to ensure an AI project is within regulatory bodies\' frameworks', 'Wait for regulatory bodies to contact them regarding noncompliance mitigation', 'Refine the AI model', 'Refine how data is processed and collected'], answer: ['Take additional security measures to ensure an AI project is within regulatory bodies\' frameworks', 'Refine the AI model', 'Refine how data is processed and collected'] },
+    { type: 'multi-select', question: 'Which three statements regarding explainability requirements are true?', options: ['They include interpretability so people can understand AI model results', 'They are a series of steps used to transform data used for an AI model into a final prediction or outcome', 'They promote transparency and trust in AI systems', 'They are clear explanations for decisions, predictions, and recommendations made from an AI model', 'They include role-based access control (RBAC)'], answer: ['They include interpretability so people can understand AI model results', 'They promote transparency and trust in AI systems', 'They are clear explanations for decisions, predictions, and recommendations made from an AI model'] },
+    { type: 'mcq', question: 'What happens if an AI model does not perform as anticipated?', options: ['The model must be used as-is', 'A new AI model must be built', 'A different algorithm must be chosen', 'Parameters can be adjusted and a model can be retrained'], answer: 'Parameters can be adjusted and a model can be retrained' },
+    { type: 'mcq', question: 'What should happen first in session meetings for evaluating AI solutions?', options: ['Outline the budget', 'Identify sensitive data', 'Identify stakeholders', 'Outline non-AI solutions'], answer: 'Identify stakeholders' },
+    { type: 'multi-select', question: 'How can AI developers reduce the risk of self-fulfilling prophecies affecting AI outcomes? Choose two answers.', options: ['Consider where the data is stored', 'Consider historical biases', 'Consider the age of the AI model', 'Consider how the training data compares to real-world data', 'Consider how the AI model can impact the data used in the algorithm'], answer: ['Consider how the training data compares to real-world data', 'Consider how the AI model can impact the data used in the algorithm'] },
+    { type: 'mcq', question: 'A model can be trained using multiple training iterations, but the same parameter combinations must be used.', options: ['True', 'False'], answer: 'False' },
+    { type: 'mcq', question: 'How can one prevent bias in real-world data input into an AI model?', options: ['Manually enter data rather than uploading data', 'Only use data collected from certain demographics', 'Compare real-world inputs to training data', 'Implement an algorithm that removes bias'], answer: 'Compare real-world inputs to training data' }
+],
+            'd4q_pre-questions': [
+    { type: 'mcq', question: 'All data connections need to be custom-built.', options: ['True', 'False'], answer: 'False' },
+    { type: 'mcq', question: 'What might overall performance issues lead to?', options: ['Revising selected features', 'Data drift', 'Concept drift', 'Servers going down'], answer: 'Revising selected features' },
+    { type: 'mcq', question: 'Larger businesses will always hire outside support teams for their Al model.', options: ['True', 'False'], answer: 'False' },
+    { type: 'mcq', question: 'What is edge case testing?', options: ['Testing the response time and processing time of a model', 'Intentionally manipulating input data to evaluate an Al system\'s vulnerability to attacks or misleading inputs', 'Testing performance on cases that may push the system beyond its normal operating range', 'Testing for false positives and false negatives in the results of a model'], answer: 'Testing performance on cases that may push the system beyond its normal operating range' },
+    { type: 'mcq', question: 'How should documentation meant for users\' consumption be shared?', options: ['SharePoint', 'An internal webpage', 'GitHub', 'A public-facing website'], answer: 'An internal webpage' }
+],
+            'd4q_post-questions': [
+    { type: 'multi-select', question: 'What are three metrics used to measure the acceptable speed for an application?', options: ['Response time', 'Processing time', 'Request volume', 'Fault tolerance', 'Predictions per second'], answer: ['Response time', 'Processing time', 'Predictions per second'] },
+    { type: 'mcq', question: 'Why should an AI application be tested under multiple connection circumstances?', options: ['Mobile device users will not always have a strong connection to the servers', 'To establish speed benchmarks', 'To assess the performance and scalability of the app', 'Mobile device users might use different operating systems'], answer: 'To assess the performance and scalability of the app' },
+    { type: 'multi-select', question: 'What are three options for collecting feedback on an AI model?', options: ['Focus groups', 'Reviewing social media channels', 'A dedicated support email address', 'User testing', 'A call center'], answer: ['A dedicated support email address', 'Focus groups', 'User testing'] },
+    { type: 'multi-select', question: 'Which statements about A1 model documentation are true? Choose three.', options: ['Support documentation should only be internally facing', 'Every model function should have a clear purpose and intent and expected behavior', 'Comments within code make the code difficult to read and are not useful for documentation', 'Information about the API should be documented for programmers', 'Any versioning and data changes should be documented to improve quality'], answer: ['Every model function should have a clear purpose and intent and expected behavior', 'Information about the API should be documented for programmers', 'Any versioning and data changes should be documented to improve quality'] },
+    { 
+    type: 'drag_drop', 
+    question: 'Arrange the steps for finding and building a solution to connect existing data stores with an application in the correct order.', 
+    items: [
+        { id: 'Assess existing data stores', text: 'Assess existing data stores' },
+        { id: 'Determine how to retrieve and synchronize data', text: 'Determine how to retrieve and synchronize data' },
+        { id: 'Test migrations and integrations', text: 'Test migrations and integrations' },
+        { id: 'Analyze and revise transformed data', text: 'Analyze and revise transformed data' }
+    ], 
+    answers: { 
+        'Assess existing data stores': 'Position 1', 
+        'Determine how to retrieve and synchronize data': 'Position 2', 
+        'Test migrations and integrations': 'Position 4', 
+        'Analyze and revise transformed data': 'Position 4' 
+    } 
+},
+    { type: 'mcq', question: 'Which issue might occur if users do not understand what personal data an app collects is used for?', options: ['They may experience issues with the app and not know how to fix them', 'They may be reluctant(resistant) to use the app', 'They may try to use the app for unintended purposes', 'They may expect the app to do more than it is capable of'], answer: 'They may be reluctant(resistant) to use the app' },
+    { type: 'mcq', question: 'What is the term for an AI technique that analyzes user feedback?', options: ['Sentiment analysis', 'Interview analysis', 'Survey analysis', 'User analysis'], answer: 'Sentiment analysis' },
+    { type: 'multi-select', question: 'What are the two categories of challenges that can occur for an AI model?', options: ['Concept drift', 'User acceptance', 'Model limitations', 'Precision', 'Data'], answer: ['Model limitations', 'Data'] },
+    { type: 'mcq', question: 'How many days of weather data would be needed to train a model to produce seven days worth of attendance predictions based on weather?', options: ['70', '30', '7', '140'], answer: '70' },
+    { type: 'multi-select', question: 'What are three things support teams need to support an AI solution properly?', options: ['Coding knowledge', 'A knowledge base', 'Data access', 'Hands-on training', 'Good communication on changes and updates'], answer: ['A knowledge base', 'Hands-on training', 'Good communication on changes and updates'] },
+    { type: 'mcq', question: 'What is the minimum information users of an AI model need in order to use the model effectively?', options: ['A guide explaining how to use the model and its limitations', 'The model\'s code', 'Data used to generate the model', 'The model\'s API'], answer: 'A guide explaining how to use the model and its limitations' },
+    { type: 'multi-select', question: 'What are three methods of managing customer expectations for an AI model?', options: ['APIs', 'Prototypes', 'Development timeline', 'Model code', 'Use-case examples'], answer: ['Prototypes', 'Development timeline', 'Use-case examples'] },
+    { type: 'mcq', question: 'What is data drift?', options: ['A change in the statistical properties of the input data', 'A change in the underlying concept a model is trained on', 'A low level of confidence in a model\'s results', 'An increase of bias in the data'], answer: 'A change in the statistical properties of the input data' },
+    { type: 'mcq', question: 'What defines adversarial testing?', options: ['Intentionally manipulating input data to evaluate an AI system\'s vulnerability to attacks or misleading inputs', 'Testing performance on cases that may push the system beyond its normal operating range', 'Testing for false positives and false negatives in the results of a model', 'Testing the response time and processing time of a model'], answer: 'Intentionally manipulating input data to evaluate an AI system\'s vulnerability to attacks or misleading inputs' },
+    { type: 'mcq', question: 'What is the goal of drift detection?', options: ['To test for false positives and false negatives in a model\'s result', 'To ensure that an AI model stays aligned with the evolving dynamics of the data used within the model', 'To evaluate a model\'s resistance to misleading inputs', 'To detect potential bias in the AI model results'], answer: 'To ensure that an AI model stays aligned with the evolving dynamics of the data used within the model' },
+    { type: 'multi-select', question: 'What are three necessary considerations for building data connections?', options: ['Error and exception handling', 'Amount of data to transform', 'Data privacy and security', 'Training methodology', 'Data transformation requirements'], answer: ['Error and exception handling', 'Data privacy and security', 'Data transformation requirements'] },
+    { type: 'multi-select', question: 'Which three statements about testing AI accuracy are true?', options: ['Both positive and negative samples should be used to assess a model\'s accuracy', 'Test case scenarios should be evaluated based on desired results', 'False positives and false negatives should be analyzed for classification-based projects', 'User error does not need to be evaluated as a potential issue for AI models', 'Test cases should include expected data and situations the AI system will encounter'], answer: ['Both positive and negative samples should be used to assess a model\'s accuracy', 'False positives and false negatives should be analyzed for classification-based projects', 'Test cases should include expected data and situations the AI system will encounter'] },
+    { type: 'mcq', question: 'What should be done with an AI model when bias is discovered?', options: ['Remove features', 'Change code used to run the model', 'Retrain the model', 'Change to a faster computing method'], answer: 'Retrain the model' },
+    { type: 'mcq', question: 'Why might one need to implement new ways to collect data for a model?', options: ['To make the AI model more accurate overall', 'To get better feedback for the AI model', 'To make the AI model more robust', 'To increase the speed of the AI model'], answer: 'To make the AI model more robust' },
+    { type: 'multi-select', question: 'Which items are appropriate documentation types for AI models? Choose three.', options: ['User data', 'FAQs', 'White papers', 'Training data', 'User guides'], answer: ['FAQs', 'White papers', 'User guides'] }
+],
+            'd5q_pre-questions': [
+    { type: 'mcq', question: 'What is the first step in identifying and mitigating potential issues with AI solutions?', options: ['Increasing or diversifying data being used from groups with perceived bias', 'Monitor performance of the system hosting the solution', 'Analyze the data being used to find patterns that might lead to biased outcomes', 'Observe the system over time in a variety of contexts'], answer: 'Analyze the data being used to find patterns that might lead to biased outcomes' },
+    { type: 'mcq', question: 'Which item should one monitor to ensure AI model performance is high?', options: ['Metrics', 'Data', 'Usage', 'Errors'], answer: 'Metrics' },
+    { type: 'mcq', question: 'What may indicate a user is confused with AI in an app?', options: ['They stay in an app for a long time', 'They refuse to pay for the app', 'They download the app more than once', 'They repeatedly abandon or redo tasks'], answer: 'They repeatedly abandon or redo tasks' },
+    { type: 'mcq', question: 'What can be done to get a deeper understanding of why people like or dislike certain aspects of AI solutions?', options: ['Conduct user interviews or focus groups', 'Monitor the AI solution performance', 'Look for unexpected metrics', 'Observe the system over time in a variety of contexts'], answer: 'Conduct user interviews or focus groups' },
+    { type: 'mcq', question: 'If you come across an unexpected metric, what is the best course of action?', options: ['Reboot the system on which it occurred', 'Ignore it', 'Investigate the root cause and determine the problem', 'Observe the system over time in a variety of contexts'], answer: 'Investigate the root cause and determine the problem' }
+],
+            'd5q_post-questions': [
+    { type: 'mcq', question: 'What should be done if a miniature golf course adds a major new attraction that affects staffing needs?', options: ['Decommissioning the AI model and create a new one', 'Retrain the AI model to account for staffing needs', 'Create another AI model o account for the staffing needs', 'Continue using the AI model without change'], answer: 'Retrain the AI model to account for staffing needs' },
+    { type: 'multi-select', question: 'What are three ways in which feedback can be used to help improve an AI product?', options: ['Implement a KPI such as Net Promoter Score (NPS) so users can rate an app', 'Conduct an A/B test to compare different responses and usage patterns to different app versions', 'Ensure that any implemented AI solution promotes fairness, transparency, privacy, and security', 'Monitor app usage to determine whether users are abandoning the app or staying in it', 'Use a drift detector to identify shifts in underlying data used in an app'], answer: ['Implement a KPI such as Net Promoter Score (NPS) so users can rate an app', 'Conduct an A/B test to compare different responses and usage patterns to different app versions', 'Monitor app usage to determine whether users are abandoning the app or staying in it'] },
+    { type: 'multi-select', question: 'Once an A1 solution is fully implemented, what are two considerations that need to be made regularly?', options: ['Test it or deploy it', 'Monitor it or decommission it', 'Improve it or decommission it', 'Improve it or test it'], answer: ['Monitor it or decommission it', 'Improve it or decommission it'] },
+    { type: 'mcq', question: 'What are key performance indicators (KPIs) for AI models?', options: ['Any unexpected metrics', 'Numeric values that determine how well a model is performing', 'Metrics that define levels of success or failure', 'Data types and characteristics'], answer: 'Numeric values that determine how well a model is performing' },
+    { type: 'mcq', question: 'What is a bias mitigation technique for addressing disparities in AI outcomes?', options: ['Analyze the data to find patterns that might lead to biased outcomes', 'Observe the system over time in a variety of contexts', 'Compare previous metrics with new metrics', 'Increasing or diversifying data being used from groups with perceived bias'], answer: 'Increasing or diversifying data being used from groups with perceived bias' },
+    { type: 'mcq', question: 'Which feedback assessment tracks the movement of a user\'s cursor across the screen?', options: ['Direct feedback', 'Real-time interaction', 'Chatbot conversation', 'Mouse tracking'], answer: 'Mouse tracking' },
+    { type: 'mcq', question: 'What is one use of KPIs with an AI model?', options: ['To compare previous metrics with new metrics when changes are made', 'To measure the technical performance of an AI model', 'To monitor system compliance', 'To debug a system with errors or defects'], answer: 'To compare previous metrics with new metrics when changes are made' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match the mode of operation to its description.', 
+    items: [
+        { id: 'drift_mode', text: 'Drift mode' }, 
+        { id: 'degraded_mode', text: 'Degraded mode' }
+    ], 
+    answers: { 
+        'drift_mode': 'Changes or shifts in data distribution', 
+        'degraded_mode': 'AI system is not performing to its maximum capabilities' 
+    } 
+},
+    { type: 'multi-select', question: 'What are three examples of demographic subgroups?', options: ['Socioeconomic status', 'Age', 'Password', 'Race', 'Fingerprint'], answer: ['Socioeconomic status', 'Age', 'Race'] },
+    { type: 'multi-select', question: 'What causes new information to fail to make its way into an AI model? Choose three answers.', options: ['AI system is not performing to its maximum capabilities', 'A change in external data sources and the way they are accessed', 'Metrics not being monitored', 'A failed data import', 'A process changing data incorrectly'], answer: ['A change in external data sources and the way they are accessed', 'A failed data import', 'A process changing data incorrectly'] },
+    { type: 'mcq', question: 'What should be done after implementing feedback-based changes into future versions of an AI solution?', options: ['Deploy the app', 'Retrain the AI model for the app', 'Create a new app, utilizing those changes', 'Test, deploy, and monitor the changes'], answer: 'Test, deploy, and monitor the changes' },
+    { type: 'mcq', question: 'Why is monitoring an AI model\'s compliance with legal and regulatory needs important?', options: ['To ensure data is not skewed, which can affect AI model results', 'To help address errors and ensure AI models are running smoothly', 'To prevent a data breach or regulatory violation that might harm an organization\'s reputation', 'To ensure performance is high'], answer: 'To prevent a data breach or regulatory violation that might harm an organization\'s reputation' },
+    { type: 'mcq', question: 'When an alert is triggered, what should be the first step taken?', options: ['Investigate it immediately to determine the type of issue', 'Take corrective action immediately', 'Reboot the system immediately', 'Wait for a second alert before investigating'], answer: 'Investigate it immediately to determine the type of issue' },
+    { type: 'mcq', question: 'Which statement is true regarding AI solutions and unexpected business metrics?', options: ['They can only provide indirectly unexpected business metrics', 'They can provide unexpected business metrics directly or indirectly', 'They never provide any unexpected business metrics', 'They can only provide directly unexpected business metrics'], answer: 'They can provide unexpected business metrics directly or indirectly' },
+{ 
+    type: 'drag_drop', 
+    question: 'Match each logging area to its corresponding description.', 
+    items: [
+        { id: 'auditing', text: 'Auditing' }, 
+        { id: 'accountability', text: 'Accountability' }, 
+        { id: 'security', text: 'Security' }
+    ], 
+    answers: { 
+        'auditing': 'Reveals unauthorized access to a model or data within a model', 
+        'accountability': 'Ensures transparency within an AI model and tracks recommendations made through it', 
+        'security': 'Helps an organization comply with applicable regulations for an AI model' 
+    } 
+},
+    { type: 'multi-select', question: 'What are indicators of opportunities for optimization in an AI solution?', options: ['Size of the dataset used', 'KPIs or user feedback', 'Drift or degraded mode', 'Characteristics of the data being used'], answer: ['KPIs or user feedback', 'Drift or degraded mode'] }
+],
+        }
 
         let currentQuizType = null;
         let score = 0;
@@ -176,22 +591,67 @@
                 currentQuizType = pageName;
                 renderQuiz(questions[pageName]);
             } else {
-                contentArea.innerHTML = `<div class="p-8 container-bg rounded-2xl shadow-xl text-center"><h1 class="text-4xl font-extrabold text-blue-900 mb-4">Coming Soon!</h1><p class="text-lg text-blue-800">Content for ${pageName.replace('-', ' ')} is not yet available.</p></div>`;
+                contentArea.innerHTML = `<div class="p-8 container-bg rounded-2xl shadow-xl text-center"><h1 class="text-4xl font-extrabold text-blue-900 mb-4">Coming Soon!</h1><p class="text-lg text-blue-800">Content for ${getQuizTitle(pageName)} is not yet available.</p></div>`;
             }
+        }
+        
+        function getQuizTitle(quizKey) {
+            const parts = quizKey.split('_');
+            if (parts.length > 1) {
+                const domain = parts[0].toUpperCase();
+                const quizType = parts[1].replace('-', ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+                return `${domain} - ${quizType}`;
+            }
+            return quizKey.replace('-', ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
         }
 
         function renderSubpageMenu(domainName) {
             const contentArea = document.getElementById('content-area');
             const subpages = quizSubpages[domainName];
             const heading = domainName.toUpperCase();
+
+            const descriptions = {
+    'd1q': `
+        <ul>
+            <li><big>AI Problem Definition.</big></li>
+        </ul>
+    `,
+    'd2q': `
+        <ul>
+            <li><big>Data Collection Processing and Engineering.</big></li>
+        </ul>
+    `,
+    'd3q': `
+        <ul>
+            <li><big>AI Algorithms and Models.</big></li>
+        </ul>
+    `,
+    'd4q': `
+        <ul>
+            <li><big>Application Integration and Deployment.</big></li>
+        </ul>
+    `,
+    'd5q': `
+        <ul>
+            <li><big>Maintaining and Monitoring AI Video.</big></li>
+        </ul>
+    `
+};
+            
+            
+            const description = descriptions[domainName] || 'No description available for this domain.';
+
             const buttonsHtml = subpages.map(subpage => {
-                const buttonText = subpage.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+                const buttonText = getQuizTitle(subpage);
                 return `<button onclick="loadPage('${subpage}')" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">${buttonText}</button>`;
             }).join('');
 
             contentArea.innerHTML = `
                 <div class="p-8 container-bg rounded-2xl shadow-xl text-center">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">${heading}</h1>
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-2">${heading}</h1>
+                    <p class="text-lg text-blue-800 mb-6 max-w-2xl mx-auto">
+                        ${description}
+                    </p>
                     <div class="flex flex-wrap justify-center space-x-4">
                         ${buttonsHtml}
                     </div>
@@ -200,48 +660,49 @@
         }
 
         function renderQuiz(quizQuestions) {
-            const contentArea = document.getElementById('content-area');
-            const quizHtml = quizQuestions.map((q, index) => {
-                let questionHtml = '';
-                if (q.type === 'mcq' || q.type === 'multi-select') {
-                    const inputType = q.type === 'mcq' ? 'radio' : 'checkbox';
-                    const name = `q${index}`;
-                    const optionsHtml = q.options.map(option => `
-                        <div class="flex items-center space-x-2">
-                            <input type="${inputType}" name="${name}" value="${option}" id="q${index}-${option}" class="form-radio text-blue-600">
-                            <label for="q${index}-${option}" class="text-base text-gray-700">${option}</label>
-                        </div>
-                    `).join('');
-                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><div class="space-y-2">${optionsHtml}</div></div>`;
-                } else if (q.type === 'fill_in_the_blank') {
-                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><input type="text" id="q${index}-input" class="w-full mt-2 p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Type your answer here..."></div>`;
-                } else if (q.type === 'drag_drop') {
-                    const dragItemsHtml = q.items.map(item => `<div id="drag-${item.id}" class="drag-item p-4 rounded-xl shadow-sm bg-white text-gray-700 mb-2 cursor-grab" draggable="true"><img src="${item.image}" alt="${item.id}" class="w-24 h-24 mx-auto mb-2 rounded-lg" /><p class="text-sm font-medium text-center">${item.id}</p></div>`).join('');
-                    const dropTargetsHtml = q.items.map(item => `<div id="drop-${item.id}" class="drop-target p-4 rounded-xl flex-grow flex flex-col justify-center items-center text-center"><p class="text-sm font-semibold text-blue-700">${item.text}</p><div class="mt-2 w-full h-16 bg-gray-100 rounded-lg flex items-center justify-center p-2 text-gray-500 text-xs">Drop item here</div></div>`).join('');
-                    questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-4">Question ${index + 1}: ${q.question}</p><div class="flex flex-col md:flex-row gap-4"><div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Items</h3>${dragItemsHtml}</div><div id="drop-targets-container" class="w-full md:w-2/3 grid md:grid-cols-1 gap-4 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Descriptions</h3>${dropTargetsHtml}</div></div></div>`;
-                }
-                return questionHtml;
-            }).join('');
-
-            contentArea.innerHTML = `
-                <h1 class="text-4xl font-extrabold text-blue-900 text-center mb-6">${currentQuizType.replace('-', ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ')}</h1>
-                <div class="max-w-4xl mx-auto">
-                    ${quizHtml}
-                    <div id="quiz-results" class="p-6 mt-6 bg-white rounded-xl shadow-lg border border-blue-200 hidden">
-                        <h3 class="text-2xl font-bold text-blue-700 mb-2">Quiz Results</h3>
-                        <p id="score-display" class="text-xl font-semibold text-gray-800"></p>
-                    </div>
-                    <div class="flex justify-center space-x-4 mt-6">
-                        <button onclick="checkAnswers()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Check Answers</button>
-                        <button onclick="resetQuiz()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Reset Quiz</button>
-                    </div>
+    const contentArea = document.getElementById('content-area');
+    const quizHtml = quizQuestions.map((q, index) => {
+        let questionHtml = '';
+        if (q.type === 'mcq' || q.type === 'multi-select') {
+            const inputType = q.type === 'mcq' ? 'radio' : 'checkbox';
+            const name = `q${index}`;
+            const optionsHtml = q.options.map(option => `
+                <div class="flex items-center space-x-2">
+                    <input type="${inputType}" name="${name}" value="${option}" id="q${index}-${option}" class="form-radio text-blue-600">
+                    <label for="q${index}-${option}" class="text-base text-gray-700">${option}</label>
                 </div>
-            `;
-            
-            if (quizQuestions.some(q => q.type === 'drag_drop')) {
-                setupDragAndDrop();
-            }
+            `).join('');
+            questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><div class="space-y-2">${optionsHtml}</div></div>`;
+        } else if (q.type === 'fill_in_the_blank') {
+            questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-2">Question ${index + 1}: ${q.question}</p><input type="text" id="q${index}-input" class="w-full mt-2 p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Type your answer here..."></div>`;
+        } else if (q.type === 'drag_drop') {
+            // Updated code here: Removed the image tag and added a text-only item.
+            const dragItemsHtml = q.items.map(item => `<div id="drag-${item.id}" class="drag-item p-4 rounded-xl shadow-sm bg-white text-gray-700 mb-2 cursor-grab" draggable="true"><p class="text-sm font-medium text-center">${item.text}</p></div>`).join('');
+            const dropTargetsHtml = q.items.map(item => `<div id="drop-${item.id}" class="drop-target p-4 rounded-xl flex-grow flex flex-col justify-center items-center text-center"><p class="text-sm font-semibold text-blue-700">${q.answers[item.id]}</p><div class="mt-2 w-full h-16 bg-gray-100 rounded-lg flex items-center justify-center p-2 text-gray-500 text-xs">Drop item here</div></div>`).join('');
+            questionHtml = `<div class="quiz-card container-bg mb-4"><p class="font-semibold text-lg text-blue-800 mb-4">Question ${index + 1}: ${q.question}</p><div class="flex flex-col md:flex-row gap-4"><div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Items</h3>${dragItemsHtml}</div><div id="drop-targets-container" class="w-full md:w-2/3 grid md:grid-cols-1 gap-4 p-4 bg-white rounded-lg shadow-inner"><h3 class="font-bold text-blue-900 mb-2">Descriptions</h3>${dropTargetsHtml}</div></div></div>`;
         }
+        return questionHtml;
+    }).join('');
+
+    contentArea.innerHTML = `
+        <h1 class="text-4xl font-extrabold text-blue-900 text-center mb-6">${getQuizTitle(currentQuizType)}</h1>
+        <div class="max-w-4xl mx-auto">
+            ${quizHtml}
+            <div id="quiz-results" class="p-6 mt-6 bg-white rounded-xl shadow-lg border border-blue-200 hidden">
+                <h3 class="text-2xl font-bold text-blue-700 mb-2">Quiz Results</h3>
+                <p id="score-display" class="text-xl font-semibold text-gray-800"></p>
+            </div>
+            <div class="flex justify-center space-x-4 mt-6">
+                <button onclick="checkAnswers()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Check Answers</button>
+                <button onclick="resetQuiz()" class="btn-primary rounded-full px-6 py-3 font-semibold shadow-md">Reset Quiz</button>
+            </div>
+        </div>
+    `;
+    
+    if (quizQuestions.some(q => q.type === 'drag_drop')) {
+        setupDragAndDrop();
+    }
+}
 
         function setupDragAndDrop() {
             const dragItems = document.querySelectorAll('.drag-item');
